@@ -4,6 +4,9 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 include_directories(${CHOLMOD_INCLUDE_DIR})
 include_directories(${CSPARSE_INCLUDE_DIR})
 
+# the following 2 lines are added to correctly detect the python version 
+find_package(PythonInterp) 
+find_package(PythonLibs)
 
 # pybind11 (version 2.2.1)
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/EXTERNAL/pybind11/tools)
